@@ -19,8 +19,27 @@ def shortest_names():
     for sorted_countrie in sorted_countries_by_lenght:
         if sorted_countrie[1] == min_lenght:
             shortest_countries.append(sorted_countrie[0])  
-    print(shortest_countries)
+    # print(shortest_countries)
     return shortest_countries
+
+def most_vowels():
+    countries_by_vowels = {}
+    sorted_countries_by_vowels = {}
+    countries_most_vowels = []
+    # vowels = ["a", "e", "i", "o", "u"]
+    for countrie in countries:
+        num_vowels = 0
+        for char in countrie:
+            if char in "aeiouAEIOU":
+                num_vowels += 1
+        countries_by_vowels[countrie] = num_vowels
+        sorted_countries_by_vowels = sorted(countries_by_vowels.items(), key=lambda x:x[1], reverse=True);
+    for sorted_countrie_by_vowels in sorted_countries_by_vowels:
+        countries_most_vowels.append(sorted_countrie_by_vowels[0])
+    print(countries_most_vowels)
+    return countries_most_vowels
+
+    
 
 
 # This block is only run if this file is the entrypoint; python main.py
@@ -31,5 +50,6 @@ if __name__ == "__main__":
     """ Write the calls to your functions here. """
 
 shortest_names()
+most_vowels()
 
 
