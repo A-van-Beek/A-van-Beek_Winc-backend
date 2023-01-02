@@ -19,7 +19,7 @@ def shortest_names():
     for sorted_countrie in sorted_countries_by_lenght:
         if sorted_countrie[1] == min_lenght:
             shortest_countries.append(sorted_countrie[0])  
-    print("kortste landen:", shortest_countries[0:2])
+    # print("kortste landen:", shortest_countries[0:2])
     return shortest_countries
 
 def most_vowels():
@@ -36,7 +36,7 @@ def most_vowels():
         sorted_countries_by_vowels = sorted(countries_by_vowels.items(), key=lambda x:x[1], reverse=True);
     for sorted_countrie_by_vowels in sorted_countries_by_vowels:
         countries_most_vowels.append(sorted_countrie_by_vowels[0])
-    print("meeste klinkers:", countries_most_vowels[0:2])
+    # print("meeste klinkers:", countries_most_vowels[0:2])
     return countries_most_vowels
 
 
@@ -60,8 +60,8 @@ def check_in_countries_alphabet(next_char):
 def alphabet_set():
     for next_char in "zqjxkvbpgacdefhilmnorstuwy":
         check_in_countries_alphabet(next_char)
-    # print("countries_alphabet:", countries_alphabet)
-    # print("aantal:", len(countries_alphabet))
+    return countries_alphabet
+    # print("countries_alphabet:", countries_alphabet, len(countries_alphabet))
 
 # This block is only run if this file is the entrypoint; python main.py
 # It is not run if it is imported as a module: `from main import *`
