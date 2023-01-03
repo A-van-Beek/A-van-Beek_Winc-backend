@@ -67,12 +67,14 @@ def alphabet_set():
 # It is not run if it is imported as a module: `from main import *`
 if __name__ == "__main__":
     countries = get_countries()
+    shortest_names()
+    most_vowels()
+    alphabet_set()
 
     """ Write the calls to your functions here. """
 
-shortest_names()
-most_vowels()
-alphabet_set()
+
+
 
 
 
