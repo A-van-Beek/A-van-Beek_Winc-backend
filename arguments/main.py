@@ -18,3 +18,25 @@ def greet(name, greet_template="Hello, <name>!"):
 
 
 # print(greet("Piet", "wat leuk, <name>"))
+planets = {
+    "sun": 274,
+    "juputer": 24.9,
+    "neptune": 11.1,
+    "saturn": 10.4,
+    "earth": 9.7,
+    "uranus": 8.8,
+    "venus": 8.8,
+    "mars": 3.7,
+    "mercury": 3.7,
+    "moon": 1.6,
+    "pluto": 0.5,
+}
+
+
+def force(mass: float, body="earth"):
+    gravity = planets[body]
+    total_force = mass * gravity
+    return total_force
+
+
+print(force(1))
